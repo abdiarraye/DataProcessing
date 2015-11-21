@@ -9,9 +9,9 @@ with open('knmi.csv','r') as csvfile:
   
   new= [[nummer], [waarde]]
   
-  with open ('test.csv','w')as n:
+  with open ('knmi_new.csv','w')as n:
    output = csv.writer(n)
-   for row in reader:
+   for line in reader:
     temp = row[2]
     date = row[1]
     date = date[:4]+'/'+date[4:6]+date[6:5]+'/'+date[6:8]
